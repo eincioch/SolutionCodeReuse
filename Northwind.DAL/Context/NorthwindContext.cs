@@ -13,7 +13,7 @@ namespace Northwind.DAL.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer(@"Server=OTI-DEV-EINCIO\MSSQLSERVER2019;database=NorthwindDemo;User Id=sa;Password=04748826");
+            optionsBuilder.UseSqlServer(@"Server=SVREVSOFT\MSSQLSERVER2019;database=NorthwindDemo;User Id=sa;Password=04748826");
         }
     }
 }

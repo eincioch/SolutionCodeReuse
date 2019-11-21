@@ -9,5 +9,9 @@ namespace Northwind.DAL.Interface
     {
         List<Product> GetProducts();
         Product GetProduct(int Id);
+        Product Create(Product newProduct);
+        int Update(Product newProduct);
+        int Delete(int Id);
+
     }
 }

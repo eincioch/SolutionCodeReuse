@@ -19,9 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Solucion Service Rest (N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.WebAPI", "Northwind.WebAPI\Northwind.WebAPI.csproj", "{64808D2C-4BCE-4492-87D8-B68A2CB6AF0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Entities", "Northwind.Entities\Northwind.Entities.csproj", "{82E55833-612C-4418-89BD-F9F4B8209B2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Entities", "Northwind.Entities\Northwind.Entities.csproj", "{82E55833-612C-4418-89BD-F9F4B8209B2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.DAL", "Northwind.DAL\Northwind.DAL.csproj", "{54B81286-339A-485F-9F8B-1C8DC3CCB6BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.DAL", "Northwind.DAL\Northwind.DAL.csproj", "{54B81286-339A-485F-9F8B-1C8DC3CCB6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.BLL", "Northwind.BLL\Northwind.BLL.csproj", "{0BC3D70A-3596-4D89-A502-3D68EEE11B6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{54B81286-339A-485F-9F8B-1C8DC3CCB6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54B81286-339A-485F-9F8B-1C8DC3CCB6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54B81286-339A-485F-9F8B-1C8DC3CCB6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BC3D70A-3596-4D89-A502-3D68EEE11B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC3D70A-3596-4D89-A502-3D68EEE11B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC3D70A-3596-4D89-A502-3D68EEE11B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC3D70A-3596-4D89-A502-3D68EEE11B6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{64808D2C-4BCE-4492-87D8-B68A2CB6AF0F} = {22AEE7F1-3AE1-402A-8511-3F29E7840F67}
 		{82E55833-612C-4418-89BD-F9F4B8209B2A} = {A09906D8-BC8E-467B-8B85-B9AEDD0183A2}
 		{54B81286-339A-485F-9F8B-1C8DC3CCB6BA} = {733EE579-7E7C-4733-9A62-A3DFAEA5C4EC}
+		{0BC3D70A-3596-4D89-A502-3D68EEE11B6C} = {535C2D49-0BAF-4233-9383-188D2AB20C70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C1173D5-6ACF-47AF-BDC5-2238AD43541A}

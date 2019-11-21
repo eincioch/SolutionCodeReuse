@@ -12,14 +12,37 @@ namespace Northwind.DAL.Repositorio
     {
         public Product GetProduct(int Id)
         {
-            using (var northwindContext = new NorthwindContext()) {
-                return northwindContext.Products.ToList();
-            }
+            //new caracteristica C# 8
+            using var Context = new NorthwindContext(); 
+            return Context.Products.Where(p=>p.Id==Id).FirstOrDefault();
         }
 
         public List<Product> GetProducts()
         {
-            throw new NotImplementedException();
+            using var Context = new NorthwindContext();
+            return Context.Products.ToList();
+        }
+
+        public Product Create(Product newProduct) {
+
+            using var Context = new NorthwindContext();
+            Context.Add(newProduct);
+            Context.SaveChanges();
+            return newProduct;
+        }
+
+        public int Update(Product newProduct)
+        {
+            using var Context = new NorthwindContext();
+            Context.Update(newProduct);
+            return Context.SaveChanges();
+        }
+
+        public int Delete(int Id)
+        {
+            using var Context = new NorthwindContext();
+            Context.Remove(new Product { Id=Id});
+            return Context.SaveChanges();
         }
     }
 }
