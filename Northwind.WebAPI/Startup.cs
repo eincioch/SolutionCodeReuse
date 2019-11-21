@@ -40,8 +40,16 @@ namespace Northwind.WebAPI
                 );
             });
 
-            //Inyeccion de dependencias
-            services.AddScoped(typeof(IProductsBLL), typeof(ProductsBLL));
+            //------------------------------------------------------
+            //Inyeccion de dependencias - inversión de control (IoC)
+            //https://docs.microsoft.com/es-es/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.0#service-lifetimes-and-registration-options
+            //------------------------------------------------------
+            //* Los servicios de duración con ámbito (AddScoped) se crean una vez por solicitud del cliente (conexión).
+            services.AddScoped<IProductsBLL,ProductsBLL>();
+            //* Los servicios con duración Singleton (AddSingleton) se crean la primera vez que se solicitan, o bien al ejecutar Startup.ConfigureServices y especificar una instancia con el registro del servicio. Cada solicitud posterior usa la misma instancia. Si la aplicación requiere un comportamiento de singleton, se recomienda permitir que el contenedor de servicios administre la duración del servicio. No implemente el patrón de diseño de singleton y proporcione el código de usuario para administrar la duración del objeto en la clase.
+            //services.AddSingleton<IProductsBLL, ProductsBLL>();
+            //* Los servicios de duración transitoria (AddTransient) se crean cada vez que el contenedor del servicio los solicita. Esta duración funciona mejor para servicios sin estado ligeros.
+            //services.AddTransient<IProductsBLL, ProductsBLL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

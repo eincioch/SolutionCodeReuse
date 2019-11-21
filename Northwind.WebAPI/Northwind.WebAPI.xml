@@ -4,5 +4,57 @@
         <name>Northwind.WebAPI</name>
     </assembly>
     <members>
+        <member name="T:Northwind.WebAPI.Controllers.ProductsController">
+            <summary>
+            Controller Products
+            </summary>
+        </member>
+        <member name="M:Northwind.WebAPI.Controllers.ProductsController.#ctor(Northwind.BLL.InterfaceBLL.IProductsBLL)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="productsBLL"></param>
+        </member>
+        <member name="M:Northwind.WebAPI.Controllers.ProductsController.Get">
+            <summary>
+            Lista todos los productos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Northwind.WebAPI.Controllers.ProductsController.Get(System.Int32)">
+            <summary>
+            Obtiene Product por Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Northwind.WebAPI.Controllers.ProductsController.Post(Northwind.Entities.Entity.Product)">
+            <summary>
+            Crea un nuevo Product
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Northwind.WebAPI.Controllers.ProductsController.Put(Northwind.Entities.Entity.Product)">
+            <summary>
+            Actualiza un product
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Northwind.WebAPI.Controllers.ProductsController.Delete(System.Int32)">
+            <summary>
+            Elimina un Product
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Northwind.WebAPI.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
