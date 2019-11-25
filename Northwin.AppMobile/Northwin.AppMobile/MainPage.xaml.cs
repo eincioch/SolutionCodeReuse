@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Northwind.Entities.Entity;
+using Northwind.RestService.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +18,21 @@ namespace Northwin.AppMobile
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        protected async override void OnAppearing() {
+            base.OnAppearing();
+            var ResClient = new ServiceClient();
+            ListView.ItemsSource = await ResClient.GetProductsAsync();
+        }
+
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e) {
+            await Navigation.PushAsync(new ProductItemPage { BindingContext = e.SelectedItem as Product, IsNew = false });
+        }
+
+        private async void OnAddItemClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProductItemPage { BindingContext = new Product(), IsNew=true});
         }
     }
 }
